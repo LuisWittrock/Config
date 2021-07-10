@@ -21,4 +21,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lervag/vimtex'
     "vimwiki
     Plug 'vimwiki/vimwiki'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() },     'for': ['markdown', 'vim-plug']} 
+
 call plug#end()
