@@ -8,7 +8,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Syntax highlighting
     Plug 'sheerun/vim-polyglot'
     "AUTOCOMPLETION
-    Plug 'Valloric/YouCompleteMe'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    
     "pairs for [, {, ( etc.
     Plug 'jiangmiao/auto-pairs'
     "File explorer
@@ -21,6 +22,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'lervag/vimtex'
     "vimwiki
     Plug 'vimwiki/vimwiki'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() },     'for': ['markdown', 'vim-plug']} 
-
+    "Markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} 
+    " Snippets
+    Plug 'sirver/ultisnips'
+    Plug 'honza/vim-snippets'
+    
 call plug#end()

@@ -1,7 +1,7 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plug-config/coc.vim
 " BASIC SETUP:
-set nocompatible
-    
+
 syntax enable
 filetype plugin on
 
@@ -17,12 +17,6 @@ command! MakeTags !ctags -R .
 " ^] to jump to tag under cursor
 " g^] for ambigous tags
 " ^t to jump back up the tag stack
-
-" AUTO COMPLETE:
-" 
-" ^x^n for just this file
-" ^x^] for tags only
-" ^n for anything specified bt the complete option
 
 " FILE BROWSING:
 " use it by typing :edit .
@@ -48,11 +42,6 @@ let ayucolor="dark"
 syntax on
 colorscheme ayu
 
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
 
 let g:vimwiki_global_ext = 0
 let vimwiki = {}
@@ -61,4 +50,10 @@ let vimwiki.syntax = 'markdown'
 let vimwiki.ext = '.md'
 let g:vimwiki_list = [vimwiki]
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-  
+
+"NERDTree
+nmap <F6> :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen=1
+
+" snippets
+
